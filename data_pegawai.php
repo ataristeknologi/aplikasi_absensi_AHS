@@ -8,7 +8,7 @@
 
                 if($data->num_rows === 0)
                 {
-                    $my_array = array("nama_pegawai" => '', "jabatan" => '', "id_pegawai" => '');
+                    $my_array = array("nama_pegawai" => '', "jabatan" => '', "id_pegawai" => '',"foto" => 'foto_default.png');
                     $json_string = json_encode($my_array);
                     echo $json_string;
                 }
@@ -18,9 +18,10 @@
                         $nama= $d['nama_pegawai'];
                         $id_pegawai= $d['id_pegawai'];
                         $jabatan= $d['jabatan'];
+                        $foto= $d['foto'];
                     }
                     
-                    $my_array = array("nama_pegawai" => $nama, "jabatan" => $jabatan, "id_pegawai" => $id_pegawai);
+                    $my_array = array("nama_pegawai" => $nama, "jabatan" => $jabatan, "id_pegawai" => $id_pegawai,"foto" => $foto);
                     $json_string = json_encode($my_array);
                     echo $json_string;
                 }
